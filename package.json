@@ -1,0 +1,14 @@
+{
+  "name": "urban-bites",
+  "version": "1.0.0",
+  "description": "Modern, premium frontend-only restaurant food ordering platform",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.11"
+  }
+}

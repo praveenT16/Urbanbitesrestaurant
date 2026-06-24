@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Urban Bites | Premium Food Ordering & Restaurant Experience</title>
+  <meta name="description" content="Savor premium, fresh, and chef-crafted meals delivered right to your doorstep. Explore our diverse menu including gourmet pizzas, burgers, fresh starters, and traditional biryanis.">
+  <meta name="keywords" content="Urban Bites, restaurant, food ordering, online delivery, gourmet food, pizza, burgers, biryani, starters, dessert">
+  <meta name="author" content="Urban Bites Team">
+  
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Fullscreen Preloader -->
+  <div id="preloader">
+    <div class="loader-logo">
+      <i class="fa-solid fa-utensils text-primary"></i> URBAN<span>BITES</span>
+    </div>
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="glass">
+    <div class="container nav-wrapper">
+      <!-- Logo -->
+      <a href="#home" class="logo" id="nav-logo">
+        <i class="fa-solid fa-utensils"></i> URBAN<span>BITES</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="active" id="link-home">Home</a></li>
+          <li><a href="#menu" id="link-menu">Menu</a></li>
+          <li><a href="#about" id="link-about">About Us</a></li>
+          <li><a href="#testimonials" id="link-testimonials">Reviews</a></li>
+          <li><a href="#contact" id="link-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="nav-btn" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- Cart Button -->
+        <button class="nav-btn" id="cart-toggle-btn" aria-label="Open Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cart-badge-count">0</span>
+        </button>
+
+        <!-- Hamburger Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Mobile Menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-subtitle">Gourmet Experience</span>
+        <h1 class="hero-title">Delicious Food Delivered Fresh To Your Doorstep</h1>
+        <p class="hero-description">Experience the culinary masterpiece of hand-stretched pizzas, juicy gourmet burgers, aromatic dum biryanis, and artisanal desserts cooked with passion by elite chefs.</p>
+        <div class="hero-ctas">
+          <a href="#menu" class="btn btn-primary">Order Now <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#menu" class="btn btn-secondary">View Menu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Categories Section -->
+  <section class="section-bg-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="subtitle">What are you craving?</span>
+        <h2 class="title">Popular Categories</h2>
+      </div>
+      
+      <div class="categories-slider no-scrollbar reveal">
+        <div class="category-card active" data-category="All" id="cat-all">
+          <div class="category-icon-wrapper">
+            <i class="fa-solid fa-utensils fa-lg"></i>
+          </div>
+          <span class="category-name">All Items</span>
+        </div>
+        <div class="category-card" data-category="Starters" id="cat-starters">
+          <div class="category-icon-wrapper">
+            <i class="fa-solid fa-pepper-hot fa-lg"></i>
+          </div>
+          <span class="category-name">Starters</span>
+        </div>
+        <div class="category-card" data-category="Veg Meals" id="cat-veg-meals">
+          <div class="category-icon-wrapper">
+            <i class="fa-solid fa-leaf fa-lg"></i>
+          </div>
+          <span class="category-name">Veg Meals</span>
+        </div>
+        <div class="category-card" data-category="Non-Veg Meals" id="cat-non-veg">
+          <div class="category-icon-wrapper">
+            <i class="fa-solid fa-drumstick-bite fa-lg"></i>
+          </div>
+          <span class="category-name">Non-Veg</span>
+        </div>
+        <div class="category-card" data-category="Biryani" id="cat-biryani">
+          <div class="category-icon-wrapper">
+            <i class="fa-solid fa-bowl-rice fa-lg"></i>
+          </div>
+          <span class="category-name">Biryani</span>
+        </div>
+        <div class="category-card" data-category="Pizza" id="cat-pizza">
+          <div class="category-icon-wrapper">
+            <i class="fa-solid fa-pizza-slice fa-lg"></i>
+          </div>
+          <span class="category-name">Pizza</span>
+        </div>
+        <div class="category-card" data-category="Burgers" id="cat-burgers">
+          <div class="category-icon-wrapper">
+            <i class="fa-solid fa-hamburger fa-lg"></i>
+          </div>
+          <span class="category-name">Burgers</span>
+        </div>
+        <div class="category-card" data-category="Chinese" id="cat-chinese">
+          <div class="category-icon-wrapper">
+            <i class="fa-solid fa-egg fa-lg"></i>
+          </div>
+          <span class="category-name">Chinese</span>
+        </div>
+        <div class="category-card" data-category="Desserts" id="cat-desserts">
+          <div class="category-icon-wrapper">
+            <i class="fa-solid fa-ice-cream fa-lg"></i>
+          </div>
+          <span class="category-name">Desserts</span>
+        </div>
+        <div class="category-card" data-category="Beverages" id="cat-beverages">
+          <div class="category-icon-wrapper">
+            <i class="fa-solid fa-wine-glass-sad fa-lg"></i>
+          </div>
+          <span class="category-name">Beverages</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Offers Banner -->
+  <section class="special-offers">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="subtitle">Limited Time Deals</span>
+        <h2 class="title">Special Offers For You</h2>
+      </div>
+      <div class="offers-container reveal">
+        <div class="offer-card offer-card-1">
+          <span class="offer-badge">WEEKEND SPECIAL</span>
+          <h3 class="offer-title">Get 50% Off On All Gourmet Pizzas</h3>
+          <p class="offer-desc">Order any sourdough specialty pizza and grab a massive flat 50% discount this Saturday & Sunday.</p>
+          <span class="offer-code">CODE: PIZZA50</span>
+        </div>
+        <div class="offer-card offer-card-2">
+          <span class="offer-badge">FREE DELIVERY</span>
+          <h3 class="offer-title">Free Shipping On First 3 Orders</h3>
+          <p class="offer-desc">New to Urban Bites? Order your favorite meal combo today and get zero delivery fee automatically.</p>
+          <span class="offer-code">CODE: FREEGO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Dishes Section -->
+  <section class="section-bg-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="subtitle">Highly Recommended</span>
+        <h2 class="title">Our Featured Dishes</h2>
+      </div>
+      <div class="featured-grid reveal" id="featured-dishes-container">
+        <!-- Rendered dynamically via JS from the Chef's Choice / Signature / Best Seller tags -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="subtitle">Our Promise</span>
+        <h2 class="title">Why Choose Us?</h2>
+      </div>
+      <div class="why-us-grid reveal">
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="fa-solid fa-truck-fast fa-2xl"></i>
+          </div>
+          <h3 class="why-title">Super Fast Delivery</h3>
+          <p class="why-desc">We deliver piping hot food packed with thermal insulation layers within 30 minutes flat.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="fa-solid fa-kitchen-set fa-2xl"></i>
+          </div>
+          <h3 class="why-title">Hygiene Guaranteed</h3>
+          <p class="why-desc">Our kitchens are fully automated, regularly sanitized, and chefs follow strict global safety norms.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="fa-solid fa-seedling fa-2xl"></i>
+          </div>
+          <h3 class="why-title">Fresh Ingredients</h3>
+          <p class="why-desc">We source high-grade seasonal vegetables and organic meats directly from local premium farms daily.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="fa-solid fa-percent fa-2xl"></i>
+          </div>
+          <h3 class="why-title">Exciting Weekly Offers</h3>
+          <p class="why-desc">Enjoy highly rewarding loyalty points, cashback promos, and 50% discount events every week.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="section-bg-alt">
+    <div class="container">
+      <div class="about-wrapper">
+        <!-- Images Grid -->
+        <div class="about-images reveal">
+          <div class="about-img-box">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format&fit=crop&q=80" alt="Restaurant Interior">
+          </div>
+          <div class="about-img-box">
+            <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=600&auto=format&fit=crop&q=80" alt="Chef Preparing Dish">
+          </div>
+          <div class="about-img-box">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop&q=80" alt="Fresh ingredients">
+          </div>
+          <div class="about-img-box">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&auto=format&fit=crop&q=80" alt="Gourmet Burger closeup">
+          </div>
+        </div>
+        
+        <!-- About Text Details -->
+        <div class="about-text reveal">
+          <span class="subtitle">Our Culinary Story</span>
+          <h2 class="title">Crafting Premium Gastronomy Since 2015</h2>
+          <p class="about-desc">At Urban Bites, we believe that food is not just sustenance; it is a shared journey, an art form, and a celebration of sensory experiences. Born in the heart of the city, our kitchen has spent over a decade redefining modern fast-casual and gourmet dining.</p>
+          <p class="about-desc" style="margin-top:-10px; margin-bottom: 24px;">Every sauce is emulsified from scratch, every dough undergoes a 48-hour cold fermentation process, and our seasonings are custom blended to ensure your palate discovers a new spectrum of flavors with every single bite.</p>
+          
+          <div class="about-features">
+            <div class="about-feat-item">
+              <i class="fa-solid fa-circle-check"></i> 100% Organic Spices
+            </div>
+            <div class="about-feat-item">
+              <i class="fa-solid fa-circle-check"></i> Master Chef Curated
+            </div>
+            <div class="about-feat-item">
+              <i class="fa-solid fa-circle-check"></i> Locally Sourced Veggies
+            </div>
+            <div class="about-feat-item">
+              <i class="fa-solid fa-circle-check"></i> Zero Added Preservatives
+            </div>
+          </div>
+          <a href="#menu" class="btn btn-primary">Explore Full Menu</a>
+        </div>
+      </div>
+
+      <!-- Chefs Showcase -->
+      <div class="chefs-header reveal">
+        <span class="subtitle">Culinary Masters</span>
+        <h2 class="title">Meet Our Master Chefs</h2>
+      </div>
+      <div class="chefs-grid reveal">
+        <div class="chef-card">
+          <div class="chef-img">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&auto=format&fit=crop&q=80" alt="Chef Marcus Vance">
+          </div>
+          <div class="chef-info">
+            <h3 class="chef-name">Chef Marcus Vance</h3>
+            <span class="chef-role">Executive Head Chef</span>
+            <div class="chef-socials">
+              <a href="#" class="chef-social-link" aria-label="Marcus Vance Twitter"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" class="chef-social-link" aria-label="Marcus Vance Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="chef-social-link" aria-label="Marcus Vance Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="chef-card">
+          <div class="chef-img">
+            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&auto=format&fit=crop&q=80" alt="Chef Elena Rostova">
+          </div>
+          <div class="chef-info">
+            <h3 class="chef-name">Chef Elena Rostova</h3>
+            <span class="chef-role">Head Pastry Chef</span>
+            <div class="chef-socials">
+              <a href="#" class="chef-social-link" aria-label="Elena Rostova Twitter"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" class="chef-social-link" aria-label="Elena Rostova Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="chef-social-link" aria-label="Elena Rostova Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="chef-card">
+          <div class="chef-img">
+            <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?w=600&auto=format&fit=crop&q=80" alt="Chef Kenji Sato">
+          </div>
+          <div class="chef-info">
+            <h3 class="chef-name">Chef Kenji Sato</h3>
+            <span class="chef-role">Master Chinese Wok Chef</span>
+            <div class="chef-socials">
+              <a href="#" class="chef-social-link" aria-label="Kenji Sato Twitter"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" class="chef-social-link" aria-label="Kenji Sato Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="chef-social-link" aria-label="Kenji Sato Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Menu Section -->
+  <section id="menu">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="subtitle">Fresh From Kitchen</span>
+        <h2 class="title">Our Craft Menu</h2>
+      </div>
+
+      <!-- Menu Search & Category Pills -->
+      <div class="menu-controls reveal">
+        <div class="menu-search-filter">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="menu-search-input" placeholder="Search dishes, ingredients, starters..." aria-label="Search dishes">
+          </div>
+        </div>
+
+        <div class="menu-category-pills no-scrollbar" id="menu-pills-container">
+          <button class="pill-btn active" data-category="All" id="pill-all">All Items</button>
+          <button class="pill-btn" data-category="Starters" id="pill-starters">Starters</button>
+          <button class="pill-btn" data-category="Veg Meals" id="pill-veg">Veg Meals</button>
+          <button class="pill-btn" data-category="Non-Veg Meals" id="pill-non-veg">Non-Veg Meals</button>
+          <button class="pill-btn" data-category="Biryani" id="pill-biryani">Biryani</button>
+          <button class="pill-btn" data-category="Pizza" id="pill-pizza">Pizza</button>
+          <button class="pill-btn" data-category="Burgers" id="pill-burgers">Burgers</button>
+          <button class="pill-btn" data-category="Chinese" id="pill-chinese">Chinese</button>
+          <button class="pill-btn" data-category="Desserts" id="pill-desserts">Desserts</button>
+          <button class="pill-btn" data-category="Beverages" id="pill-beverages">Beverages</button>
+        </div>
+      </div>
+
+      <!-- Dishes Grid -->
+      <div class="menu-grid reveal" id="menu-dishes-grid">
+        <!-- Rendered dynamically by main.js (30+ items) -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials Section -->
+  <section id="testimonials" class="section-bg-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="subtitle">Testimonials</span>
+        <h2 class="title">What Our Customers Say</h2>
+      </div>
+
+      <div class="testimonials-wrapper reveal">
+        <div class="testimonials-track" id="testimonials-track">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide">
+            <div class="test-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="test-text">"Urban Bites has completely set a new benchmark for food delivery in the city. The Smoked Truffle Beef Burger arrived within 25 minutes, with the brioche bun absolutely soft, and the truffle cheese melted perfectly. Simply incredible!"</p>
+            <img class="test-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80" alt="Customer Sarah Mitchell">
+            <h4 class="test-name">Sarah Mitchell</h4>
+            <span class="test-role">Gastronome & Tech Lead</span>
+          </div>
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <div class="test-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="test-text">"The Hyderabadi Dum Biryani here tastes exactly like the legendary biryanis in Hyderabad. Saffron aroma is authentic, mutton chunks are extremely soft, and the raita is fresh. Ordering every Friday night now!"</p>
+            <img class="test-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80" alt="Customer Rajesh Kumar">
+            <h4 class="test-name">Rajesh Kumar</h4>
+            <span class="test-role">Software Architect</span>
+          </div>
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <div class="test-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p class="test-text">"Outstanding service! I had guests over and placed a large order of 6 different starters and 3 pizzas. Everything arrived beautifully packaged, labelled, and warm. The Stuffed Truffle Mushrooms were the highlight!"</p>
+            <img class="test-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&auto=format&fit=crop&q=80" alt="Customer Emily Thompson">
+            <h4 class="test-name">Emily Thompson</h4>
+            <span class="test-role">Event Curator</span>
+          </div>
+        </div>
+
+        <!-- Arrows -->
+        <div class="test-controls">
+          <button class="test-arrow" id="test-prev" aria-label="Previous Review"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="test-arrow" id="test-next" aria-label="Next Review"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Gallery Section -->
+  <section class="no-scrollbar" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="subtitle">Social Feed</span>
+        <h2 class="title">Join Our Food Gallery</h2>
+      </div>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80" alt="Instagram paneer bites">
+        <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&auto=format&fit=crop&q=80" alt="Instagram Pizza">
+        <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&auto=format&fit=crop&q=80" alt="Instagram Burger">
+        <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&auto=format&fit=crop&q=80" alt="Instagram Noodles">
+        <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&auto=format&fit=crop&q=80" alt="Instagram Brownie">
+        <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&auto=format&fit=crop&q=80" alt="Instagram Mojito">
+        <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="subtitle">Get In Touch</span>
+        <h2 class="title">We'd Love To Hear From You</h2>
+      </div>
+
+      <div class="contact-wrapper">
+        <!-- Contact Information Info Panels -->
+        <div class="contact-info-panel reveal">
+          <div class="contact-card-box">
+            <div class="contact-icon-box">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <h5>Find Us Here</h5>
+              <p>42 Culinary Boulevard, Suite 100, Gourmet District, NY 10001</p>
+            </div>
+          </div>
+
+          <div class="contact-card-box">
+            <div class="contact-icon-box">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <h5>Call Or Support</h5>
+              <p>+1 (555) 782-9483 / +1 (555) 782-9484</p>
+            </div>
+          </div>
+
+          <div class="contact-card-box">
+            <div class="contact-icon-box">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <h5>Email Address</h5>
+              <p>hello@urbanbites.com / support@urbanbites.com</p>
+            </div>
+          </div>
+
+          <div class="contact-card-box">
+            <div class="contact-icon-box">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div>
+              <h5>Business Hours</h5>
+              <p>Mon - Thu: 11:00 AM - 11:00 PM<br>Fri - Sun: 11:00 AM - 01:00 AM</p>
+            </div>
+          </div>
+
+          <!-- Maps Placeholder -->
+          <div class="map-placeholder">
+            <img class="map-img" src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&auto=format&fit=crop&q=80" alt="Map graphic placeholder">
+            <div class="map-overlay">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>42 Culinary Boulevard, NY 10001</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form UI -->
+        <div class="contact-form-wrapper glass reveal">
+          <form class="contact-form" id="contact-form-element">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="john@example.com" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-phone">Phone Number</label>
+                <input type="tel" id="contact-phone" class="form-control" placeholder="+1 (555) 000-0000" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" class="form-control" placeholder="Catering, Feedback, Table booking" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Your Message</label>
+              <textarea id="contact-message" class="form-control" placeholder="Write your message detail here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1 -->
+        <div class="footer-col">
+          <div class="footer-logo">
+            <i class="fa-solid fa-utensils text-primary"></i> URBAN<span>BITES</span>
+          </div>
+          <p class="footer-about-text">Providing premium quality dining experiences and fast delivery from our multi-cuisine smart kitchen directly to your dynamic lifestyle since 2015.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact Support</a></li>
+          </ul>
+        </div>
+        <!-- Col 3 -->
+        <div class="footer-col">
+          <h4>Working Hours</h4>
+          <ul class="footer-hours-list">
+            <li><span>Monday</span> <span>11:00 AM - 11:00 PM</span></li>
+            <li><span>Tuesday</span> <span>11:00 AM - 11:00 PM</span></li>
+            <li><span>Wednesday</span> <span>11:00 AM - 11:00 PM</span></li>
+            <li><span>Thursday</span> <span>11:00 AM - 11:00 PM</span></li>
+            <li><span>Fri - Sun</span> <span>11:00 AM - 01:00 AM</span></li>
+          </ul>
+        </div>
+        <!-- Col 4 -->
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p class="footer-newsletter-text">Subscribe to our newsletter to receive hot deals, promo codes, and special seasonal menu alerts.</p>
+          <form class="newsletter-form" id="newsletter-form-element">
+            <input type="email" placeholder="Your Email Address" aria-label="Newsletter email" required>
+            <button type="submit" class="btn btn-primary" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Urban Bites Restaurant. All Rights Reserved. Designed by Antigravity.</p>
+        <p>Terms of Service | Privacy Policy | Cookie settings</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-in Cart Sidebar Panel -->
+  <div class="cart-drawer-overlay" id="cart-overlay-background"></div>
+  <div class="cart-drawer glass-heavy" id="cart-sidebar-drawer">
+    <div class="cart-header">
+      <h3>Your Bag (<span id="cart-header-qty">0</span>)</h3>
+      <button class="close-cart-btn" id="close-cart-drawer-btn" aria-label="Close Cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Cart Items Grid -->
+    <div class="cart-items-wrapper" id="cart-items-list-container">
+      <!-- Empty cart state by default -->
+      <div class="cart-empty" id="cart-empty-state">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h4 class="cart-empty-title">Your Cart is Empty</h4>
+        <p>Looks like you haven't added anything to your cart yet. Go ahead and explore our delicious menu!</p>
+        <button class="btn btn-primary" id="cart-start-ordering-btn">Order Now</button>
+      </div>
+    </div>
+
+    <!-- Cart Footer calculations -->
+    <div class="cart-footer" id="cart-footer-calculations" style="display: none;">
+      <!-- Promo code input -->
+      <div class="cart-promo-box">
+        <input type="text" id="promo-code-input" placeholder="Enter Promo Code (e.g. PIZZA50)">
+        <button class="btn btn-outline" id="apply-promo-btn">Apply</button>
+      </div>
+
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal-val">$0.00</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Delivery Fee</span>
+        <span id="cart-delivery-val">$4.99</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>GST / Tax (18%)</span>
+        <span id="cart-tax-val">$0.00</span>
+      </div>
+      <div class="cart-summary-row" id="promo-discount-row" style="display: none; color: var(--accent-green);">
+        <span>Promo Discount</span>
+        <span id="promo-discount-val">-$0.00</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Grand Total</span>
+        <span id="cart-total-val">$0.00</span>
+      </div>
+
+      <button class="btn btn-primary checkout-btn" id="checkout-cta-btn">Proceed To Checkout <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Floating Actions (Call, WhatsApp, Top) -->
+  <div class="floating-actions">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/15557829483" target="_blank" class="float-btn float-whatsapp" aria-label="Contact us on WhatsApp">
+      <i class="fa-brands fa-whatsapp fa-xl"></i>
+    </a>
+    <!-- Phone Call -->
+    <a href="tel:+15557829483" class="float-btn float-call" aria-label="Call restaurant support">
+      <i class="fa-solid fa-phone fa-lg"></i>
+    </a>
+    <!-- Back to top -->
+    <button class="float-btn float-back-to-top" id="back-to-top-btn" aria-label="Back to Top">
+      <i class="fa-solid fa-arrow-up fa-lg"></i>
+    </button>
+  </div>
+
+  <!-- App Main Javascript Code -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
